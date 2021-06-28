@@ -1,0 +1,21 @@
+<aura:component controller="CalloutAura" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="response" type="Map"/>
+    <aura:attribute name="ListOfAnimals" type="String[]"/>
+    
+    <div class="slds-m-around--medium">
+        
+       
+          <lightning:button variant="brand" label="Show Animals" onclick="{! c.calloutCtrl }" />             
+          
+     
+       
+   <h3 class="slds-section-title--divider"> Animals : {!v.response.Animals}</h3>
+        
+         
+        <ul class="slds-list--dotted">
+            <aura:iteration items="{!v.ListOfAnimals}" var="anmList">
+                <li>{!anmList}</li>
+            </aura:iteration>
+        </ul>
+    </div>
+</aura:component>
